@@ -1,5 +1,5 @@
 import pytest
-from util import algo
+from src.util import algo
 
 
 @pytest.mark.must

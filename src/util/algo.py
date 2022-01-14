@@ -28,3 +28,6 @@ def sel_sort(data):
               vals[j] = vals[i]
               vals[i] = _min
   return vals
+
+def is_palindrome(val):
+    return val == val[::-1]
