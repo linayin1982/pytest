@@ -45,7 +45,8 @@ def invalid_user():
 def login_tokens(valid_user):
     config_ = Config()
     api = config_.config('default', 'token_api')
-    r = requests.post(url = api, data=valid_user, verify=False)
+    r = requests.post(url=api, data=valid_user, verify=False)
+    # r = requests.post(url = api, data=valid_user,cert=r'C:\Users\yinxli00\AppData\Local\Programs\Python\Python37\lib\site-packages\certifi\cacert.pem')
     json_r = r.json()
     return {'access_token':json_r['access_token'],'refresh_token':json_r['refresh_token']}
 
